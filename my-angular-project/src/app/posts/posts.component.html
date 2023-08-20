@@ -1,0 +1,19 @@
+<div>
+    <div class="user" *ngIf="user">
+        <h1>username:{{user.username}}</h1>
+        <hr>
+        <h1>password:{{user.password}}</h1>
+    </div>
+    <div class="posts">
+        <a routerLink='/posts/{{post.id}}' *ngFor="let post of posts">
+            <div class="post">
+
+                <h1>{{post.id}}</h1>
+                <h3>{{post.title}}</h3>
+                <h1>{{post.body.substr(0,60)}}...</h1>
+
+            </div>
+        </a>
+    </div>
+
+</div>
